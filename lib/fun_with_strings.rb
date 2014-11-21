@@ -27,6 +27,3 @@ end
 class String
   include FunWithStrings
 end
-
-
-p "".anagram_groups
