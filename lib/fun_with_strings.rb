@@ -16,8 +16,7 @@ module FunWithStrings
       word = word.downcase.split('').sort.join
       hashed[word] += [index]
     end
-    groups = hashed.values.map { |value| value.map { |index| words[index] } } # if value.count > 1 }
-    groups
+    hashed.values.map { |value| value.map { |index| words[index] } }
   end
   
 end

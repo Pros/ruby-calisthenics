@@ -8,3 +8,15 @@ class Class
     }
   end
 end
+
+class Foo 
+  attr_accessor_with_history :bar
+end
+
+def test
+  f = Foo.new        
+  f.bar = 3          # => 3
+  f.bar = :wowzo     # => :wowzo
+  f.bar = 'boo!'     # => 'boo!'
+  f.bar_history      # => [nil, 3, :wowzo]
+end
